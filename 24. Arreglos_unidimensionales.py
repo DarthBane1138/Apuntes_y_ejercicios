@@ -77,3 +77,87 @@ for i in range(len(arreglo)):
 # En este bucle for se recorrenrán los elementos de la lista "arreglo". La función "range(len(arreglo))" crea un rango de valores desde 0 hasta la longitud del arreglo.
 # El bucle se ejecutará una vez para cada valor en el rango, y en cada iteración, el valor actual se almacenará en la variable "i"
 # Dentro del bucle, se utiliza la variable "i" para acceder a cada elemento de la lista "arreglo" mediante el índice "i"
+
+#  Otras funciones
+print(numpy.arange(4))  # Se crea arreglo con 4 elementos enteros
+print(numpy.arange(4.0))  # Se crea arreglo con 4 elementos con un decimal
+# Se crea arreglo con elementos entre 4 y 7, con un intervcalo de 1 y se exluye el último elemento
+print(numpy.arange(4, 7))
+# Se crea arreglo con elementos entre 3 y 7, con un intervalo de 2. Se excluye el último elemento
+print(numpy.arange(3, 7, 2))
+
+# Copiar arreglos
+# Caso 1
+print("")
+arreglo01 = numpy.array([1, 2, 3])
+arreglo02 = arreglo01[:]
+print(arreglo02)
+arreglo02[0] = 100
+print(arreglo02)
+print(arreglo01)
+# Se genera la copia de arreglo01 en arreglo02, sin embargo al realizar cambios en el arreglo origianl
+# éstos se mantienen en el segundo arreglo
+# Tener en cuanta que se crea una copia superficial de arreglo01 y la asigna a arreglo02. lo que significa que la copia superficial
+# solo crea una nueva referencia al mismo objeto subyacente en la memoria, entonces, cuando modificas arreglo02[0], se está modificando el primer elemento de la copia superficial "arreglo02"
+# pero esa modificación también afecta al objeto original en la memoria, que es "arreglo01". Esto se debe a que
+# "arreglo01" y "arreglo02" están vinculados al mismo objeto. Para evitar esto se puede utilizar el método copy
+#
+# Caso 2
+arreglo001 = numpy.array([1, 2, 3])
+arreglo002 = arreglo001[:].copy()
+# Se puede escribir también como:
+# arreglo002 = arreglo001.copy()
+print(arreglo002)
+arreglo002[0] = 100
+print(arreglo002)
+print(arreglo001)
+
+# Operaciones con arreglos
+print("")
+arreglo003 = numpy.array([1, 2, 3, 4])
+print(arreglo003)
+arreglo003 = arreglo003 + 1
+print(arreglo003)
+print("")
+arreglo004 = numpy.array([1, 2, 3, 4])
+print(arreglo004)
+arreglo004 = arreglo004 ** 2
+print(arreglo004)
+print("")
+arreglo005 = numpy.ones(4)
+print(arreglo005)
+arreglo006 = numpy.ones(4)
+arreglo006 = arreglo006 + 1
+print(arreglo006)
+print("")
+arreglo007 = numpy.array([1, 2, 3, 4])
+arreglo008 = numpy.array([4, 2, 2, 4])
+arreglo009 = arreglo007 + arreglo008
+print(arreglo009)
+print("")
+arreglo010 = numpy.array([1, 2, 3, 4])
+arreglo011 = numpy.array([4, 2, 2, 4])
+arreglo012 = arreglo010 * arreglo011
+print(arreglo012)
+print("")
+arreglo013 = numpy.array([1, 2, 3, 4])
+arreglo014 = numpy.array([4, 2, 2, 4])
+print(arreglo013 == arreglo014)
+print("")
+arreglo015 = numpy.array([1, 2, 3, 4])
+arreglo016 = numpy.array([4, 2, 2, 4])
+print(arreglo015 > arreglo016)
+print("")
+arreglo017 = numpy.array([1, 2, 3, 4])
+print(arreglo017.sum())
+print("")
+arreglo018 = numpy.array([1, 2, 3, 4])
+print(arreglo018.mean())
+print("")
+arreglo019 = numpy.array([1, 2, 3, 4])
+print(arreglo019.min())
+print("")
+arreglo020 = numpy.array([1, 2, 3, 4])
+print(arreglo020.max())
+# Además de estas operaciones mostradas, se pueden hacer muchas más. entre estas están: resta, división, exponenciación, funciones trigonométricas
+# Funciones exponenciales y logarítmicas, redondeo de arreglos, ordenamiento etc.
