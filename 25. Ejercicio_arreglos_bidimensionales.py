@@ -8,17 +8,18 @@
 # arreglo = [[0] * 4 for _ in range(3)]
 
 # # Ingresar los elementos numéricos por pantalla
+# import numpy as np
 # for i in range(3):
 #     for j in range(4):
-#         arreglo[i][j] = int(input(f"Ingrese el elemento en la posición [{i}][{j}]: "))
+#         arreglo[i][j] = int(
+#             input(f"Ingrese el elemento en la posición [{i}][{j}]: "))
 
 # # Mostrar los elementos en forma de matriz
 # for i in range(3):
 #     for j in range(4):
 #         print(arreglo[i][j], end="\t")
 #     print()  # Salto de línea después de cada fila
-    
-import numpy as np
+
 
 # # Crear el arreglo de 3x4 con NumPy
 # arreglo = np.zeros((3, 4))
@@ -112,7 +113,8 @@ print(arreglo)
 # Ingresar los elementos numéricos por pantalla
 for i in range(10):
     for j in range(4):
-        arreglo[i][j] = int(input(f"Ingrese el elemento en la posición [{i}][{j}]: "))
+        arreglo[i][j] = int(
+            input(f"Ingrese el elemento en la posición [{i}][{j}]: "))
 
 # Mostrar los elementos en forma de matriz
 for i in range(10):
