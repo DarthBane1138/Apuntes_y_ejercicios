@@ -76,20 +76,7 @@ def agregar_afiliado():
             edad = int(
                 input("Ingrese una edad válida para el nuevo afilidado:\n"))
 
-    estado_civil = "Indeterminado"
-    while estado_civil not in ["Casad@", "Solter@", "Viud@"]:
-        estado_civil = input(
-            "Ingrese su estado civil: (C = Casad@, S = Solter@, V = Viud@):\n")
-        estado_civil = estado_civil.upper()
-        if estado_civil == "C":
-            estado_civil = "Casad@"
-        elif estado_civil == "S":
-            estado_civil = "Solter@"
-        elif estado_civil == "V":
-            estado_civil = "Viud@"
-        else:
-            print("El estado civil ingresado no es válido")
-            presione()
+    estado_civil = estado_civil_afiliado()
 
     fecha_afiliacion = input(
         "Ingrese fecha de afiliación (Formato DD/MM/AAAA):\n")
@@ -169,9 +156,29 @@ def opcion_salir(menu):
         op = int(input("¿Está seguro que desea salir?\n1. Sí \n2. No\n"))
         if op == 1:
             print("Salida confirmada. Adiós")
-            return
+            break
         elif op == 2:
             print("Regresando al menú de selección")
             input("Presione enter para continuar...")
         else:
             print("La opción seleccionada no es válida")
+
+
+def estado_civil_afiliado():
+    estado_civil = "Indeterminado"
+    while estado_civil not in ["Casad@", "Solter@", "Viud@"]:
+        estado_civil = input(
+            "Ingrese su estado civil: (C = Casad@, S = Solter@, V = Viud@):\n")
+        estado_civil = estado_civil.upper()
+        if estado_civil == "C":
+            estado_civil = "Casad@"
+            return estado_civil
+        elif estado_civil == "S":
+            estado_civil = "Solter@"
+            return estado_civil
+        elif estado_civil == "V":
+            estado_civil = "Viud@"
+            return estado_civil
+        else:
+            print("El estado civil ingresado no es válido")
+            presione()
