@@ -63,7 +63,6 @@ def agregar_afiliado():
         print("El rut ingresado no es válido. Por favor ingrese un rut válido")
         rut = input("Ingrese el rut del nuevo afiliado:\n")
 
-    # rut = rut.replace(".", "").replace("-", "")
     nombre = input("Por favor ingrese el nombre del nuevo afiliado:\n")
     edad = 0
     while edad < 18:
@@ -74,14 +73,23 @@ def agregar_afiliado():
                     "El nuevo afiliado debe ser mayor de edad, ingrese una edad válida")
         except ValueError:
             print("El valor ingresado para el campo \"edad\" no es válido")
-            edad = int(input("Ingrese una edad válida para el nuevo afilidado"))
-    estado_civil = input(
-        "Ingrese su estado civil: (C = Casad@, S = Solter@, V = Viud@):\n")
-    while estado_civil not in ["C", "S", "V"]:
-        print("El estado civil ingresado no es válido")
+            edad = int(
+                input("Ingrese una edad válida para el nuevo afilidado:\n"))
+
+    estado_civil = "Indeterminado"
+    while estado_civil not in ["Casad@", "Solter@", "Viud@"]:
         estado_civil = input(
             "Ingrese su estado civil: (C = Casad@, S = Solter@, V = Viud@):\n")
         estado_civil = estado_civil.upper()
+        if estado_civil == "C":
+            estado_civil = "Casad@"
+        elif estado_civil == "S":
+            estado_civil = "Solter@"
+        elif estado_civil == "V":
+            estado_civil = "Viud@"
+        else:
+            print("El estado civil ingresado no es válido")
+            presione()
 
     fecha_afiliacion = input(
         "Ingrese fecha de afiliación (Formato DD/MM/AAAA):\n")

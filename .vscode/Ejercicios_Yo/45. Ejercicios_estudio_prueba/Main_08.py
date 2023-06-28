@@ -1,7 +1,7 @@
-# En este programite deberemos hacer un menú para una ISAPRE, en este menú tendremos que tener las siguientes características
+# En este programita deberemos hacer un menú para una ISAPRE, en este menú tendremos que tener las siguientes características
 # 1. Agregar afiliado
 # 2. Buscar afiliado por número de rut
-# 3. La posibilidad de listar solo los afiliados solteros
+# 3. La posibilidad de listar afiliados segun estado civil solteros
 # 4. Salir del menú y cerrar el programa
 # Además se deberá comprobar que el rut del usuario ingresado no se repita y comprobar si el dígito verificador es correcto
 
