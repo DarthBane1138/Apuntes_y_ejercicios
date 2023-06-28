@@ -24,7 +24,6 @@ while menu:
             estado_civil()
         elif opcion == 4:
             mostrar_todo()
-            presione()
         elif opcion == 5:
             op = 5
             while op != 1 and op != 2:

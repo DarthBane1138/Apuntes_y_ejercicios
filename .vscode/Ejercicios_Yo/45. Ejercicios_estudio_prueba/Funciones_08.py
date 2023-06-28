@@ -8,7 +8,8 @@ def menus():
     print("1. Agregar a un afiliado")
     print("2. Buscar a un afiliado")
     print("3. Listar afiliad@s por estado civil")
-    print("4. Salir")
+    print("4. Mostrar el listado completo de los afiliados")
+    print("5. Salir")
 
 
 def validar_rut(rut):
