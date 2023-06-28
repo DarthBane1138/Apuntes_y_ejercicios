@@ -47,7 +47,7 @@ def validar_rut(rut):
 def agregar_afiliado():
     os.system("cls")
     existe_rut = True
-    while existe_rut:
+    while existe_rut == True:
         rut = input("Por favor ingrese el rut del nuevo afiliado:\n")
         rut = rut.replace(".", "").replace("-", "")
         existe_rut = False
@@ -58,6 +58,7 @@ def agregar_afiliado():
         if existe_rut:
             print("El rut del afiliado ya existe, ingrese un rut válido")
             presione()
+            os.system("cls")
         else:
             break
     while validar_rut(rut) != True:
