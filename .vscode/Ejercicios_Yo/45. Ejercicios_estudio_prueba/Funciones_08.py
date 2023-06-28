@@ -1,3 +1,4 @@
+from datetime import datetime
 import os
 afiliados = []
 
@@ -78,8 +79,7 @@ def agregar_afiliado():
 
     estado_civil = estado_civil_afiliado()
 
-    fecha_afiliacion = input(
-        "Ingrese fecha de afiliación (Formato DD/MM/AAAA):\n")
+    fecha_afiliacion = ingreso_fecha()
 
     afiliado = {
         "Rut": rut,
@@ -182,3 +182,16 @@ def estado_civil_afiliado():
         else:
             print("El estado civil ingresado no es válido")
             presione()
+
+
+def ingreso_fecha():
+    while True:
+        try:
+            fecha_afiliacion = input(
+                "Ingrese fecha con el formato (DD/MM/YYYY):\n")
+            fecha_afiliacion = datetime.strptime(
+                fecha_afiliacion, "%d/%m/%Y").date()
+            print("Fecha ingresada:", fecha_afiliacion)
+            return fecha_afiliacion
+        except ValueError:
+            print("Formato de fecha incorecto")
