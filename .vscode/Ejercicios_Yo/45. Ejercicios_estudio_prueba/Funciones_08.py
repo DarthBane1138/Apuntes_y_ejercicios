@@ -196,3 +196,15 @@ def ingreso_fecha():
             return fecha_afiliacion
         except ValueError:
             print("Formato de fecha incorecto")
+
+
+def mostrar_todo():
+    for afiliado in afiliados:
+        print("---------- Información de afiliado ----------")
+        print("Rut", afiliado["Rut"])
+        print("Nombre", afiliado["Nombre"])
+        print("Edad", afiliado["Edad"])
+        print("Estado Civil", afiliado["Estado Civil"])
+        print("Fecha de Afiliación", afiliado["Fecha de Afiliación"])
+        print("---------------------------------------------")
+        presione()

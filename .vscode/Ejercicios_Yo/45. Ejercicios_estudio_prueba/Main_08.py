@@ -23,7 +23,10 @@ while menu:
         elif opcion == 3:
             estado_civil()
         elif opcion == 4:
-            op = 4
+            mostrar_todo()
+            presione()
+        elif opcion == 5:
+            op = 5
             while op != 1 and op != 2:
                 print("Ha selecionado la opción salir")
                 op = int(input("¿Está seguro que desea salir?\n1. Sí \n2. No\n"))
